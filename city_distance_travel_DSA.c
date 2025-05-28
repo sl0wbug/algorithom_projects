@@ -10,7 +10,6 @@
 #define COST_PER_KM 3   // Define the cost per kilometer
 
 
-
 // Define a structure to represent a route between two cities
 typedef struct
 {
@@ -91,8 +90,6 @@ void merge(Route arr[], int left, int mid, int right)
     }
 }
 
-
-
 // Knapsack function to maximize the number of cities visited within a amoung_of_budget
 int knapsack(int cities[], int cost[], int n, int amoung_of_budget)
 {
@@ -109,8 +106,6 @@ int knapsack(int cities[], int cost[], int n, int amoung_of_budget)
     }
     return dp[amoung_of_budget]; // Return the maximum number of cities that can be visited within the amoung_of_budget
 }
-
-
 
 // Nearest Neighbor Heuristic for TSP Approximation
 int nearestNeighborHeuristic(int n, int dist[MAX_CITIES][MAX_CITIES], int route[MAX_CITIES])
@@ -142,9 +137,6 @@ int nearestNeighborHeuristic(int n, int dist[MAX_CITIES][MAX_CITIES], int route[
 }
 
 
-
-
-
 // Get the index of the city in the cities array
 int getCityIndex(char city[], char cities[MAX_CITIES][50], int n)
 {
@@ -157,9 +149,6 @@ int getCityIndex(char city[], char cities[MAX_CITIES][50], int n)
     }
     return -1; // Return -1 if city is not found
 }
-
-
-
 
 
 int main()
@@ -260,8 +249,6 @@ int main()
     printf("\nTotal Distance: %d km\n", totalDistance); // Print the total distance of the route
     printf("Total Cost: %d Taka\n", totalDistance * COST_PER_KM); // Print the total cost of the trip based on distance
 
-
-
     // Check if the trip is within the amoung_of_budget
     if (totalDistance * COST_PER_KM <= amoung_of_budget)   // If the total cost is less than or equal to the amoung_of_budget
     {
@@ -271,9 +258,6 @@ int main()
     {
         printf("Your trip exceeds the amoung_of_budget.\n"); // Inform the user that the trip exceeds the amoung_of_budget
     }
-
-
     
-
     return 0;
 }
